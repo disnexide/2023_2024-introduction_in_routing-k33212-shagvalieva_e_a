@@ -6,4 +6,4 @@ Group: K33212
 Author: Shagvalieva Ekaterina Albertovna
 Lab: Lab1
 Date of create: 02.10.2023
-Date of finished: xx.10.2023
+Date of finished: 27.11.2023
