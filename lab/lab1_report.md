@@ -34,15 +34,23 @@ R01.TEST:
 ![image](https://github.com/disnexide/2023_2024-introduction_in_routing-k33212-shagvalieva_e_a/assets/90693992/56d17be7-58fa-4e0f-98ae-cd01409f5d04)
 
 
+
+
 SW02.L3.01.TEST:
 ![image](https://github.com/disnexide/2023_2024-introduction_in_routing-k33212-shagvalieva_e_a/assets/90693992/dfdbdbce-43d4-41ae-afb9-183eb9a9db6d)
+
+
 
 
 SW02.L3.01.TEST:
 ![image](https://github.com/disnexide/2023_2024-introduction_in_routing-k33212-shagvalieva_e_a/assets/90693992/043b982b-2bae-4934-a62e-cdea255df13a)
 
 
+
+
 SW02.L3.02.TEST:
 ![image](https://github.com/disnexide/2023_2024-introduction_in_routing-k33212-shagvalieva_e_a/assets/90693992/653494e2-971b-402c-aeca-b8f927fc0ff3)
+
+
 
 
