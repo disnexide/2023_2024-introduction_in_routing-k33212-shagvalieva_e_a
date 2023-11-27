@@ -53,7 +53,8 @@ SW02.L3.02.TEST:
 
 
 
-Результаты пингов:
+### Результаты пингов:
+
 ![image](https://github.com/disnexide/2023_2024-introduction_in_routing-k33212-shagvalieva_e_a/assets/90693992/6b14f14a-3983-457c-8812-8862ff4672da)
 
 ![image](https://github.com/disnexide/2023_2024-introduction_in_routing-k33212-shagvalieva_e_a/assets/90693992/edfcb357-396d-44eb-a857-c2ddfd7e947e)
