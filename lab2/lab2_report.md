@@ -14,7 +14,7 @@ Lab: Lab2
 
 Date of create: 27.11.2023
 
-Date of finished: XX.XX.2023
+Date of finished: 10.12.2023
 
 # Лабораторная работ №2 "Эмуляция распределенной корпоративной сети связи, настройка статической маршрутизации между филиалами"
 
@@ -218,4 +218,10 @@ add disabled=no interface=eth1
 /system identity
 set name=PC3
 ```
+
+Результаты проверки связности:
+![image](https://github.com/disnexide/2023_2024-introduction_in_routing-k33212-shagvalieva_e_a/assets/90693992/2fa84bc8-6a75-42d2-a799-7214f0e8acbd)
+![image](https://github.com/disnexide/2023_2024-introduction_in_routing-k33212-shagvalieva_e_a/assets/90693992/8ab17060-5b9b-41cb-9943-6e07cd37ccfb)
+
+
 
