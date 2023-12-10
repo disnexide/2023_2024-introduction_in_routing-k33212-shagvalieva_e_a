@@ -20,3 +20,6 @@ Date of finished: 11.12.2023
 
 **Цель работы:** 
 Изучить протоколы OSPF и MPLS, механизмы организации EoMPLS.
+
+![image](https://github.com/disnexide/2023_2024-introduction_in_routing-k33212-shagvalieva_e_a/assets/90693992/301e7429-6511-4eae-8dc7-7e2e9574bb08)
+
