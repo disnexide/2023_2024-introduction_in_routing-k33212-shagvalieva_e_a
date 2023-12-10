@@ -68,7 +68,7 @@ Date of finished: XX.XX.2023
        - endpoints: ["R01.MSK:eth3" , "PC1:eth1"]
 ```
 
-    
+С помощью файла была развернута сеть:
 
 ![image](https://github.com/disnexide/2023_2024-introduction_in_routing-k33212-shagvalieva_e_a/assets/90693992/b4b55471-01e6-4b5b-8e89-1ad92e81b83e)
 
