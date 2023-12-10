@@ -77,5 +77,145 @@ Date of finished: XX.XX.2023
 ![image](https://github.com/disnexide/2023_2024-introduction_in_routing-k33212-shagvalieva_e_a/assets/90693992/289842b5-e8f8-4e32-8b8d-a85e050a76fc)
 
 
+Тексты конфигураций для устройств:
 
+**R01.BRL:**
+```
+/interface vlan
+add interface=ether2 name=vlan10 vlan-id=10
+add interface=ether2 name=vlan20 vlan-id=20
+
+/interface wireless security-profiles
+set [ find default=yes ] supplicant-identity=MikroTik
+
+/ip pool
+add name=pool10 ranges=192.168.10.10-192.168.10.254
+add name=pool20 ranges=192.168.20.10-192.168.20.254
+
+/ip dhcp-server
+add address-pool=pool10 disabled=no interface=vlan10 name=dhcp10
+add address-pool=pool20 disabled=no interface=vlan20 name=dhcp20
+
+/ip address
+add address=172.31.255.30/30 interface=ether1 network=172.31.255.28
+add address=192.168.10.1/24 interface=vlan10 network=192.168.10.0
+add address=192.168.20.1/24 interface=vlan20 network=192.168.20.0
+
+/ip dhcp-client
+add disabled=no interface=ether1
+
+/ip dhcp-server network
+add address=192.168.10.0/24 gateway=192.168.10.1
+add address=192.168.20.0/24 gateway=192.168.20.1
+
+/system identity
+set name=R01.BRL
+```
+
+**R01.MSK:**
+```
+/interface vlan
+add interface=ether2 name=vlan10 vlan-id=10
+add interface=ether2 name=vlan20 vlan-id=20
+
+/interface wireless security-profiles
+set [ find default=yes ] supplicant-identity=MikroTik
+
+/ip pool
+add name=pool10 ranges=192.168.10.10-192.168.10.254
+add name=pool20 ranges=192.168.20.10-192.168.20.254
+
+/ip dhcp-server
+add address-pool=pool10 disabled=no interface=vlan10 name=dhcp10
+add address-pool=pool20 disabled=no interface=vlan20 name=dhcp20
+
+/ip address
+add address=172.31.255.30/30 interface=ether1 network=172.31.255.28
+add address=192.168.10.1/24 interface=vlan10 network=192.168.10.0
+add address=192.168.20.1/24 interface=vlan20 network=192.168.20.0
+
+/ip dhcp-client
+add disabled=no interface=ether1
+
+/ip dhcp-server network
+add address=192.168.10.0/24 gateway=192.168.10.1
+add address=192.168.20.0/24 gateway=192.168.20.1
+
+/system identity
+set name=R01.MSK
+```
+
+**R01.FRT:**
+```
+/interface vlan
+add interface=ether1 name=vlan10 vlan-id=10
+add interface=ether2 name=vlan20 vlan-id=20
+add interface=ether3 name=vlan30 vlan-id=30
+
+/interface wireless security-profiles
+set [ find default=yes ] supplicant-identity=MikroTik
+
+/ip pool
+add name=pool10 ranges=192.168.10.10-192.168.10.254
+add name=pool20 ranges=192.168.20.10-192.168.20.254
+add name=pool30 ranges=192.168.30.10-192.168.30.254
+
+/ip dhcp-server
+add address-pool=pool10 disabled=no interface=vlan10 name=dhcp10
+add address-pool=pool20 disabled=no interface=vlan20 name=dhcp20
+add address-pool=pool30 disabled=no interface=vlan30 name=dhcp30
+
+/ip address
+add address=172.31.255.30/30 interface=ether4 network=172.31.255.28
+add address=192.168.10.1/24 interface=vlan10 network=192.168.10.0
+add address=192.168.20.1/24 interface=vlan20 network=192.168.20.0
+add address=192.168.30.1/24 interface=vlan30 network=192.168.30.0
+
+/ip dhcp-client
+add disabled=no interface=ether4
+
+/ip dhcp-server network
+add address=192.168.10.0/24 gateway=192.168.10.1
+add address=192.168.20.0/24 gateway=192.168.20.1
+add address=192.168.30.0/24 gateway=192.168.30.1
+
+/system identity
+set name=R01.FRT
+```
+
+**PC1:**
+```
+/interface wireless security-profiles
+set [ find default=yes ] supplicant-identity=MikroTik
+/ip address
+add address=192.168.10.2/24 interface=eth1 network=192.168.10.0
+/ip dhcp-client
+add disabled=no interface=eth1
+/system identity
+set name=PC1
+```
+
+**PC2:**
+```
+/interface wireless security-profiles
+set [ find default=yes ] supplicant-identity=MikroTik
+/ip address
+add address=192.168.20.2/24 interface=eth1 network=192.168.20.0
+/ip dhcp-client
+add disabled=no interface=eth1
+/system identity
+set name=PC2
+```
+
+**PC3:**
+```
+/interface wireless security-profiles
+set [ find default=yes ] supplicant-identity=MikroTik
+/ip address
+add address=192.168.30.2/24 interface=eth1 network=192.168.30.0
+/ip dhcp-client
+add disabled=no interface=eth1
+/system identity
+set name=PC3
+```
 
