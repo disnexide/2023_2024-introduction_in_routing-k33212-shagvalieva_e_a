@@ -72,5 +72,10 @@ Date of finished: XX.XX.2023
 
 ![image](https://github.com/disnexide/2023_2024-introduction_in_routing-k33212-shagvalieva_e_a/assets/90693992/b4b55471-01e6-4b5b-8e89-1ad92e81b83e)
 
+Схема получившейся сети:
+
+![image](https://github.com/disnexide/2023_2024-introduction_in_routing-k33212-shagvalieva_e_a/assets/90693992/289842b5-e8f8-4e32-8b8d-a85e050a76fc)
+
+
 
 
