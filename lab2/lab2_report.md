@@ -21,7 +21,7 @@ Date of finished: XX.XX.2023
 Текст файла конфигурации rogaikopyta.yaml:
 
 
-`name: lab2
+'''name: lab2
 
 mgmt:
   network: statics2
@@ -65,7 +65,7 @@ topology:
     - endpoints: ["R01.MSK:eth2" , "R01.FRT:eth2"]
     - endpoints: ["R01.BRL:eth3" , "PC3:eth1"]
     - endpoints: ["R01.FRT:eth3" , "PC2:eth1"]
-    - endpoints: ["R01.MSK:eth3" , "PC1:eth1"]`
+    - endpoints: ["R01.MSK:eth3" , "PC1:eth1"]'''
 
     
 
