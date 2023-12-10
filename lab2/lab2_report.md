@@ -21,51 +21,51 @@ Date of finished: XX.XX.2023
 Текст файла конфигурации rogaikopyta.yaml:
 
 
-'''name: lab2
+'''name: network2
 
-mgmt:
-  network: statics2
-  ipv4_subnet: 190.168.10.0/24
+   mgmt:
+     network: statics2
+     ipv4_subnet: 190.168.10.0/24
 
-topology:
-  nodes:
-    R01.BRL:
-      kind: vr-ros
-      image: vrnetlab/vr-routeros:6.47.9
-      mgmt_ipv4: 190.168.10.2
+   topology:
+     nodes:
+       R01.BRL:
+         kind: vr-ros
+         image: vrnetlab/vr-routeros:6.47.9
+         mgmt_ipv4: 190.168.10.2
 
-    R01.FRT:
-      kind: vr-ros
-      image: vrnetlab/vr-routeros:6.47.9
-      mgmt_ipv4: 190.168.10.3
+       R01.FRT:
+         kind: vr-ros
+         image: vrnetlab/vr-routeros:6.47.9
+         mgmt_ipv4: 190.168.10.3
 
-    R01.MSK:
-      kind: vr-ros
-      image: vrnetlab/vr-routeros:6.47.9
-      mgmt_ipv4: 190.168.10.4
+       R01.MSK:
+         kind: vr-ros
+         image: vrnetlab/vr-routeros:6.47.9
+         mgmt_ipv4: 190.168.10.4
 
-    PC1:
-      kind: vr-ros
-      image: vrnetlab/vr-routeros:6.47.9
-      mgmt_ipv4: 190.168.10.5
+       PC1:
+         kind: vr-ros
+         image: vrnetlab/vr-routeros:6.47.9
+         mgmt_ipv4: 190.168.10.5
 
-    PC2:
-      kind: vr-ros
-      image: vrnetlab/vr-routeros:6.47.9
-      mgmt_ipv4: 190.168.10.6
+       PC2:
+         kind: vr-ros
+         image: vrnetlab/vr-routeros:6.47.9
+         mgmt_ipv4: 190.168.10.6
 
-    PC3:
-      kind: vr-ros
-      image: vrnetlab/vr-routeros:6.47.9
-      mgmt_ipv4: 190.168.10.7
+       PC3:
+         kind: vr-ros
+         image: vrnetlab/vr-routeros:6.47.9
+         mgmt_ipv4: 190.168.10.7
 
-  links:
-    - endpoints: ["R01.BRL:eth1" , "R01.MSK:eth1"]
-    - endpoints: ["R01.BRL:eth2" , "R01.FRT:eth1"]
-    - endpoints: ["R01.MSK:eth2" , "R01.FRT:eth2"]
-    - endpoints: ["R01.BRL:eth3" , "PC3:eth1"]
-    - endpoints: ["R01.FRT:eth3" , "PC2:eth1"]
-    - endpoints: ["R01.MSK:eth3" , "PC1:eth1"]'''
+     links:
+       - endpoints: ["R01.BRL:eth1" , "R01.MSK:eth1"]
+       - endpoints: ["R01.BRL:eth2" , "R01.FRT:eth1"]
+       - endpoints: ["R01.MSK:eth2" , "R01.FRT:eth2"]
+       - endpoints: ["R01.BRL:eth3" , "PC3:eth1"]
+       - endpoints: ["R01.FRT:eth3" , "PC2:eth1"]
+       - endpoints: ["R01.MSK:eth3" , "PC1:eth1"]'''
 
     
 
