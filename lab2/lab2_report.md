@@ -224,7 +224,8 @@ set name=PC3
 
 Результаты проверки связности:
 
-![image](https://github.com/disnexide/2023_2024-introduction_in_routing-k33212-shagvalieva_e_a/assets/90693992/2fa84bc8-6a75-42d2-a799-7214f0e8acbd)
+![image](https://github.com/disnexide/2023_2024-introduction_in_routing-k33212-shagvalieva_e_a/assets/90693992/8f43c5d4-918f-48a4-9622-b09584ecd5e0)
+
 ![image](https://github.com/disnexide/2023_2024-introduction_in_routing-k33212-shagvalieva_e_a/assets/90693992/a7517e5d-90f3-4f39-875d-ae70d8c0e96c)
 
 
