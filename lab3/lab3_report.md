@@ -310,6 +310,12 @@ set name=PC1
 
 Результаты проверки связности:
 
+![image](https://github.com/disnexide/2023_2024-introduction_in_routing-k33212-shagvalieva_e_a/assets/90693992/cb637eda-57f2-4231-8685-a67d81d37757)
+
+![image](https://github.com/disnexide/2023_2024-introduction_in_routing-k33212-shagvalieva_e_a/assets/90693992/606a934b-19c4-43fe-8e4b-7a3613367f0c)
+
+![image](https://github.com/disnexide/2023_2024-introduction_in_routing-k33212-shagvalieva_e_a/assets/90693992/c4488073-3fec-473d-9da4-a7e1cb38ca94)
+
 
 
 
