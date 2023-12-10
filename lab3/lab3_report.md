@@ -30,7 +30,7 @@ name: lab3
 
 mgmt:
   network: statics
-  ipv4_subnet: 192.168.10.0/24
+  ipv4_subnet: 172.168.10.0/24
 
 topology:
 
@@ -38,42 +38,42 @@ topology:
     R01.MSK:
       kind: vr-mikrotik_ros
       image: vrnetlab/vr-routeros:6.47.9
-      mgmt_ipv4: 192.168.10.2
+      mgmt_ipv4: 172.168.10.2
 
     R01.SPB:
       kind: vr-mikrotik_ros
       image: vrnetlab/vr-routeros:6.47.9
-      mgmt_ipv4: 192.168.10.3
+      mgmt_ipv4: 172.168.10.3
 
     R01.HKI:
       kind: vr-mikrotik_ros
       image: vrnetlab/vr-routeros:6.47.9
-      mgmt_ipv4: 192.168.10.4
+      mgmt_ipv4: 172.168.10.4
 
     R01.LND:
       kind: vr-mikrotik_ros
       image: vrnetlab/vr-routeros:6.47.9
-      mgmt_ipv4: 192.168.10.5
+      mgmt_ipv4: 172.168.10.5
 
     R01.NY:
       kind: vr-mikrotik_ros
       image: vrnetlab/vr-routeros:6.47.9
-      mgmt_ipv4: 192.168.10.6
+      mgmt_ipv4: 172.168.10.6
 
     R01.LBN:
       kind: vr-mikrotik_ros
       image: vrnetlab/vr-routeros:6.47.9
-      mgmt_ipv4: 192.168.10.7
+      mgmt_ipv4: 172.168.10.7
 
     PC1:
       kind: vr-mikrotik_ros
       image: vrnetlab/vr-routeros:6.47.9
-      mgmt_ipv4: 192.168.10.8
+      mgmt_ipv4: 172.168.10.8
 
     SGI.Prism:
       kind: vr-mikrotik_ros
       image: vrnetlab/vr-routeros:6.47.9
-      mgmt_ipv4: 192.168.10.9
+      mgmt_ipv4: 172.168.10.9
 
   links:
     - endpoints: ["R01.MSK:eth1", "R01.SPB:eth1"]
@@ -114,7 +114,7 @@ set [ find default=yes ] name=ospf0 router-id=10.10.10.1
 add bridge=EoMPLS interface=ether3
 add bridge=EoMPLS interface=EoMPLS_VPLS
 /ip address
-add address=172.31.255.30/30 interface=ether1 network=172.31.255.28
+add address=172.168.10.2/30 interface=ether1 network=172.168.10.0
 add address=10.10.1.2/30 interface=ether2 network=10.10.1.0
 add address=10.10.2.1/30 interface=ether4 network=10.10.2.0
 add address=192.168.10.1/24 interface=ether3 network=192.168.10.0
@@ -144,10 +144,10 @@ set [ find default=yes ] supplicant-identity=MikroTik
 /routing ospf instance
 set [ find default=yes ] name=ospf0 router-id=10.10.10.2
 /ip address
-add address=172.31.255.30/30 interface=ether1 network=172.31.255.28
+add address=172.168.10.1/30 interface=ether1 network=172.168.10.0
 add address=10.10.1.1/30 interface=ether2 network=10.10.1.0
 add address=10.10.3.1/30 interface=ether3 network=10.10.3.0
-add address=10.10.10.2 interface=Lo0 network=10.10.10.2
+add address=10.168.10.2/24 interface=Lo0 network=172.168.10.0
 /ip dhcp-client
 add disabled=no interface=ether1
 /mpls ldp
@@ -168,21 +168,19 @@ add name=Lo0
 /interface wireless security-profiles
 set [ find default=yes ] supplicant-identity=MikroTik
 /routing ospf instance
-set [ find default=yes ] name=ospf0 router-id=10.10.10.3
+set [ find default=yes ] name=ospf0 router-id=10.10.10.4
 /ip address
-add address=172.31.255.30/30 interface=ether1 network=172.31.255.28
-add address=10.10.2.2/30 interface=ether2 network=10.10.2.0
-add address=10.10.4.2/30 interface=ether3 network=10.10.4.0
-add address=10.10.6.1/30 interface=ether4 network=10.10.6.0
-add address=10.10.10.3 interface=Lo0 network=10.10.10.3
+add address=172.168.10.5/30 interface=ether1 network=172.168.10.4
+add address=10.10.6.2/30 interface=ether2 network=10.10.6.0
+add address=10.10.7.1/30 interface=ether3 network=10.10.7.0
+add address=10.168.10.4/24 interface=Lo0 network=172.168.10.0
 /ip dhcp-client
 add disabled=no interface=ether1
 /mpls ldp
-set enabled=yes transport-address=10.10.10.3
+set enabled=yes transport-address=10.10.10.4
 /mpls ldp interface
 add interface=ether2
 add interface=ether3
-add interface=ether4
 /routing ospf network
 add area=backbone
 /system identity
@@ -196,19 +194,19 @@ add name=Lo0
 /interface wireless security-profiles
 set [ find default=yes ] supplicant-identity=MikroTik
 /routing ospf instance
-set [ find default=yes ] name=ospf0 router-id=10.10.10.4
+set [ find default=yes ] name=ospf0 router-id=10.10.10.5
 /ip address
-add address=172.31.255.30/30 interface=ether1 network=172.31.255.28
+add address=172.168.10.6/30 interface=ether1 network=172.168.10.4
 add address=10.10.6.2/30 interface=ether2 network=10.10.6.0
 add address=10.10.7.1/30 interface=ether3 network=10.10.7.0
-add address=10.10.10.4 interface=Lo0 network=10.10.10.4
+add address=10.168.10.5/24 interface=Lo0 network=172.168.10.0
 /ip dhcp-client
 add disabled=no interface=ether1
 /mpls ldp
-set enabled=yes transport-address=10.10.10.4
+set enabled=yes transport-address=10.10.10.5
 /mpls ldp interface
-add interface=ether3
 add interface=ether2
+add interface=ether3
 /routing ospf network
 add area=backbone
 /system identity
@@ -224,11 +222,11 @@ set [ find default=yes ] supplicant-identity=MikroTik
 /routing ospf instance
 set [ find default=yes ] name=ospf0 router-id=10.10.10.6
 /ip address
-add address=172.31.255.30/30 interface=ether1 network=172.31.255.28
+add address=172.168.10.9/30 interface=ether1 network=172.168.10.8
 add address=10.10.3.2/30 interface=ether2 network=10.10.3.0
 add address=10.10.4.1/30 interface=ether3 network=10.10.4.0
 add address=10.10.5.1/30 interface=ether4 network=10.10.5.0
-add address=10.10.10.6 interface=Lo0 network=10.10.10.6
+add address=10.168.10.6/24 interface=Lo0 network=172.168.10.0
 /ip dhcp-client
 add disabled=no interface=ether1
 /mpls ldp
@@ -249,8 +247,7 @@ set name=R01.LBN
 add name=EoMPLS
 add name=Lo0
 /interface vpls
-add cisco-style=yes cisco-style-id=666 disabled=no l2mtu=1500 mac-address=02:71:B2:9B:4A:D2 name=\
-    EoMPLS_VPLS remote-peer=10.10.10.1
+add cisco-style=yes cisco-style-id=666 disabled=no l2mtu=1500 mac-address=02:71:B2:9B:4A:D2 name=EoMPLS_VPLS remote-peer=10.10.10.1
 /interface wireless security-profiles
 set [ find default=yes ] supplicant-identity=MikroTik
 /routing ospf instance
@@ -259,11 +256,11 @@ set [ find default=yes ] name=ospf0 router-id=10.10.10.5
 add bridge=EoMPLS interface=ether4
 add bridge=EoMPLS interface=EoMPLS_VPLS
 /ip address
-add address=172.31.255.30/30 interface=ether1 network=172.31.255.28
+add address=172.168.10.14/30 interface=ether1 network=172.168.10.12
 add address=10.10.7.2/30 interface=ether2 network=10.10.7.0
 add address=10.10.5.2/30 interface=ether3 network=10.10.5.0
 add address=192.168.20.1/24 interface=ether4 network=192.168.20.0
-add address=10.10.10.5 interface=Lo0 network=10.10.10.5
+add address=10.168.10.5 interface=Lo0 network=172.168.10.5
 /ip dhcp-client
 add disabled=no interface=ether1
 /ip route
@@ -285,12 +282,12 @@ set name=R01.NY
 /interface wireless security-profiles
 set [ find default=yes ] supplicant-identity=MikroTik
 /ip address
-add address=172.31.255.30/30 interface=ether1 network=172.31.255.28
-add address=192.168.20.10/24 interface=ether2 network=192.168.20.0
+add address=172.168.10.18/30 interface=ether1 network=172.168.10.16
+add address=192.168.10.10/24 interface=ether2 network=192.168.10.0
 /ip dhcp-client
 add disabled=no interface=ether1
 /ip route
-add distance=1 gateway=192.168.20.1
+add distance=1 gateway=192.168.10.1
 /system identity
 set name=SGI_Prism
 ```
@@ -300,7 +297,7 @@ set name=SGI_Prism
 /interface wireless security-profiles
 set [ find default=yes ] supplicant-identity=MikroTik
 /ip address
-add address=172.31.255.30/30 interface=ether1 network=172.31.255.28
+add address=172.168.10.22/30 interface=ether1 network=172.168.10.20
 add address=192.168.10.10/24 interface=ether2 network=192.168.10.0
 /ip dhcp-client
 add disabled=no interface=ether1
