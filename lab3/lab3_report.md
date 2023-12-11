@@ -94,6 +94,7 @@ topology:
 
 Схема получившейся сети:
 
+![image](https://github.com/disnexide/2023_2024-introduction_in_routing-k33212-shagvalieva_e_a/assets/90693992/4650695e-b9ab-4ba4-bbeb-2faef71c386e)
 
 
 
