@@ -23,7 +23,7 @@ Date of finished: XX.12.2023
 
 Текст файла конфигурации lab4.yaml:
 
-'''
+```
 name: lab4
 
 mgmt:
@@ -87,7 +87,7 @@ topology:
     - endpoints: ["R01.SVL:eth4","PC3:eth4"]
     - endpoints: ["R01.HKI:eth3","R01.SPB:eth3"]
     - endpoints: ["R01.SPB:eth4","PC1:eth4"]
-'''
+```
 
 С помощью файла конфигурации была развернута сеть:
 
