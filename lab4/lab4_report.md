@@ -94,3 +94,12 @@ topology:
 
 ![image](https://github.com/disnexide/2023_2024-introduction_in_routing-k33212-shagvalieva_e_a/assets/90693992/274be5b3-ea32-48b3-82e0-ae888eef65a7)
 
+
+Схема получившейся сети:
+
+
+![image](https://github.com/disnexide/2023_2024-introduction_in_routing-k33212-shagvalieva_e_a/assets/90693992/34032878-ba8a-46e6-9ebf-a01928dc8d24)
+
+
+
+
