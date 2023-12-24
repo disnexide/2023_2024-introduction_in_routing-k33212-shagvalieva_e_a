@@ -450,3 +450,16 @@ add disabled=no interface=ether1
 /system identity
 set name=PC3
 ```
+
+
+Результаты проверки связности:
+
+
+![image](https://github.com/disnexide/2023_2024-introduction_in_routing-k33212-shagvalieva_e_a/assets/90693992/96e39305-a127-4d62-9e5d-7df070685de7)
+
+
+![image](https://github.com/disnexide/2023_2024-introduction_in_routing-k33212-shagvalieva_e_a/assets/90693992/d6c027e7-5356-4446-96cb-04340c881f15)
+
+
+**Вывод:** 
+В ходе лабораторной работы и развертывания сети были изучены протоколы BGP, MPLS и правила организации L3VPN и VPLS.
